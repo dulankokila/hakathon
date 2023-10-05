@@ -247,6 +247,7 @@ function addeprojects() {
       var t = r.responseText;
       if(t = "Sucess"){
         window.location.reload();
+        
       }
       else{
         alert(t);

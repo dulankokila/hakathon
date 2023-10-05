@@ -15,44 +15,42 @@
 
     <?php include '../header.php' ?>
 
-    <div class="container-fluid pt-1 pt-md-2 pt-lg-0">
+    <div class="container-fluid pt-1 pt-md-2 pt-lg-0 mt-5">
 
         <div class="d-flex justify-content-start pt-1 pt-md-1 pt-lg-2">
 
             <div class="col-12 py-3 px-1 px-md-4">
 
-                <h4 class="border-bottom border-dark fw-bold pb-2 pb-md-2">Project Name</h4>
+            <?php
+            require "../connection.php";
+         $rs =    Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON user_has_projects.projects_id=projects.id
+            WHERE `id`='3'");
+
+         $data =    $rs->fetch_assoc();
+            ?>
+
+                <h4 class="border-bottom border-dark fw-bold pb-2 pb-md-2"><?php echo $data["name"]?></h4>
 
                 <div class="d-flex flex-column flex-md-row">
 
                     <div class="col-12 col-md-7">
 
                         <div class="d-flex flex-column">
-                            <p class="fw-bold mb-2">Project Name : pakaya</p>
+                            <p class="fw-bold mb-2">Project Name : <?php echo $data["name"]?></p>
 
                             <div class="d-flex flex-column">
                                 <p class="fw-bold m-0">Description :</p>
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore
-                                    reiciendis impedit? Non recusandae provident amet quas reprehenderit obcaecati eaque
-                                    unde fugiat earum optio facilis iure corrupti, modi quibusdam tempore.</p>
+                                <p class="m-0"><?php echo $data["description"]?>.</p>
                             </div>
 
-                            <div class="d-flex flex-column mt-2 mb-2">
-                                <p class="fw-bold m-0">Targets :</p>
-                                <ul class="list-group list-group-flush bg-transparent text-start">
-                                    <li class="list-group-item bg-transparent m-0 py-1"><i class="bi bi-dot"></i> An item</li>
-                                    <li class="list-group-item bg-transparent m-0 py-1"><i class="bi bi-dot"></i> A second item</li>
-                                    <li class="list-group-item bg-transparent m-0 py-1"><i class="bi bi-dot"></i> A third item</li>
-                                    <li class="list-group-item bg-transparent m-0 py-1"><i class="bi bi-dot"></i> A fourth item</li>
-                                </ul>
-                            </div>
+                           
 
                         </div>
 
                     </div>
                     <div class="col-12 col-md-5">
                         <div class="d-flex flex-column align-items-start align-items-md-end">
-                            <p class="fw-bold mb-2 text-danger">Project DeadLine : 2023-11-23</p>
+                            <p class="fw-bold mb-2 text-danger">Project DeadLine :<?php echo $data[""]?></p>
                             <p class="mb-2r">Project Start Date : 2023-11-23</p>
                             <div class="d-flex flex-column align-items-start align-items-md-end">
                                 <p class="fw-bold mb-2">Technologies</p>
