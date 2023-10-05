@@ -51,6 +51,7 @@ $data = $_SESSION["u"];
                         <div class="row m-3">
                             <div class="col-12">
                                 <button class="btn btn-info mb-2">Create projects</button>
+                                <button class="button" onclick="go();">Create projects</button>
                             </div>
                             <div class="col-12 border border-2 cp">
                                 <div class="overflow-auto p-3 bg-light scroll">
