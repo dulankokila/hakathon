@@ -413,7 +413,7 @@ input[type=date]:focus {
 
 .project-detail-btn-1:hover,
 .project-detail-btn-2:hover,
-.project-detail-btn-3:hover{
+.project-detail-btn-3:hover {
   cursor: pointer;
   transition-duration: 0.5s;
   background: #9ddbff;
@@ -427,13 +427,14 @@ input[type=date]:focus {
   color: #ffffff;
 }
 
-.project-view-btn{
+.project-view-btn {
   padding: 4px 8px;
   background-color: #5c7afc;
   color: #ffffff;
   border-radius: 5px;
 }
-.project-view-btn:hover{
+
+.project-view-btn:hover {
   cursor: pointer;
   transition-duration: 0.5s;
   background-color: #002fff;
@@ -453,12 +454,31 @@ input[type=date]:focus {
   }
 
   .background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 700px;
+  }
+
+  img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .d1 {
+    color: rgb(74, 7, 82);
+    font-size: 60px;
+    font-family: "Arial";
+    font-weight: bold;
+    transition: initial;
+  }
+
+  .background {
 
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
     height: 700px;
-
 
   }
 
@@ -493,6 +513,19 @@ input[type=date]:focus {
     color: ghostwhite;
   }
 
+  /* project - create task */
+  .project-detail-btn-1 p,
+  .project-detail-btn-2 p,
+  .project-detail-btn-3 p,
+  .project-detail-btn-4 p {
+    font-size: 14px;
+  }
+
+  #project-detail-table tbody tr th,
+  #project-detail-table tbody tr td {
+    font-size: 14px;
+  }
+
   /* .d2 {
     font-weight: bold;
     font-family: "Arial";
@@ -518,15 +551,4 @@ input[type=date]:focus {
   } */
 
 
-  /* project - create task */
-.project-detail-btn-1 p,
-.project-detail-btn-2 p,
-.project-detail-btn-3 p,
-.project-detail-btn-4 p{
-  font-size: 14px;
-}
-
-#project-detail-table tbody tr th, #project-detail-table tbody tr td{
-  font-size: 14px;
-}
 }
