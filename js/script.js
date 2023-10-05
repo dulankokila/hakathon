@@ -22,8 +22,8 @@ function signup(){
         
          if(t == "Sucess"){
             window.location.reload();
-            name.innerHTML = "";
-            email.innerHTML = "";
+          
+            window.location = "signin.php";
          }
          else{
             alert(t);
@@ -33,4 +33,27 @@ function signup(){
     r.open("POST","signupprocess.php",true);
     r.send(f);
     
+}
+
+function signin(){
+    var email  = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    var f = new FormData();
+    f.append("email",email);
+    f.append("password",password);
+   
+    
+    
+
+    var r  = new XMLHttpRequest();
+    r.onreadystatechange = function (){
+        if(r.readyState == 4){
+            var t   = r.responseText;
+        alert(t);
+       
+        }
+    }
+    r.open("POST","signinprocess.php",true);
+    r.send(f);
 }

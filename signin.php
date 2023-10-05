@@ -14,18 +14,18 @@
   <div class="container ">
     <div class="row justify-content-center">
       <div class="col-md-6 ">
-        <form id="signInForm">
+        <div id="signInForm">
           <h2 class="text-center mb-4">Sign In</h2>
           <div class="text-center mb-2"><img src="images/profile-5681749-4730491.gif" class="gif "> </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+            <input type="email" class="form-control" id="email"  placeholder="Email" required>
           </div>
 
           <div class="form-group">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+          <button class="btn btn-primary btn-block" onclick="signin();">Sign In</button>
 
           <p class="mt-3 text-center">Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
 
@@ -33,7 +33,7 @@
               src="images/2993685_brand_brands_google_logo_logos_icon (1).png" class="icon mx-3" /><img
               src="images/4202105_microsoft_logo_social_social media_icon.png" class="icon mx-3" /><img
               src="images/5296499_fb_facebook_facebook logo_icon.png" class="icon mx-3" /></div>
-        </form>
+</div>
       </div>
     </div>
   </div>
