@@ -1,5 +1,7 @@
 <?php
-echo("hello");
+// header('./dashboard/createtask.php');
+$rr = $_POST["name"];
+echo($rr);
 //  require "connection.php";
 //  session_start();
 //  $data = $_SESSION["u"];
