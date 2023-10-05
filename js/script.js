@@ -230,16 +230,16 @@ function addeprojects() {
   var name = document.getElementById("name").value;
   var des = document.getElementById("dis").value;
   var tech = document.getElementById("tech").value;
-  // var sdate =  document.getElementById("start-date").value;
-  // var odate =  document.getElementById("end-date").value;
+  var sdate =  document.getElementById("start-date").value;
+  var odate =  document.getElementById("end-date").value;
   // alert(sdate);
   // alert(odate);
   var f = new FormData();
   f.append("name", name);
   f.append("des", des);
   f.append("tech", tech);
-  // f.append("sdate", sdate);
-  // f.append("odate", odate);
+  f.append("sdate", sdate);
+  f.append("odate", odate);
 
   var r = new XMLHttpRequest();
   r.onreadystatechange = function () {
