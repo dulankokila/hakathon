@@ -247,7 +247,7 @@ function addeprojects() {
       var t = r.responseText;
       if(t = "Sucess"){
         window.location.reload();
-        
+
       }
       else{
         alert(t);
@@ -258,5 +258,52 @@ function addeprojects() {
 
   // Move the open and send methods here
   r.open("POST", "../dashboard/addprojectprocess.php", true);
+  r.send(f);
+}
+function changeImage() {
+  var view = document.getElementById("viewImg"); //img tag
+  var file = document.getElementById("profileimg"); //file chooser
+
+  file.onchange = function () {
+    var file1 = this.files[0];
+    var url = window.URL.createObjectURL(file1);
+    view.src = url;
+  };
+}
+function updateProfile() {
+  var name = document.getElementById("name");
+  var country = document.getElementById("country");
+  var image = document.getElementById("profileimg");
+
+  var f = new FormData();
+  f.append("n", name.value);
+  f.append("c", country.value);
+ 
+  if (image.files.length == 0) {
+    var confirmation = confirm(
+      "Are you sure You don't want to update Profile Image?"
+    );
+
+    if (confirmation) {
+      alert("you have not selected any image.");
+    }
+  } else {
+    f.append("image", image.files[0]);
+  }
+
+  var r = new XMLHttpRequest();
+
+  r.onreadystatechange = function () {
+    if (r.readyState == 4) {
+      var t = r.responseText;
+      if (t == "success") {
+        window.location.reload();
+      } else {
+        alert(t);
+      }
+    }
+  };
+
+  r.open("POST", "updateProfileProcess.php", true);
   r.send(f);
 }
