@@ -168,13 +168,13 @@ function addTarget() {
 // Create task - add-members
 // document.getElementById("#pushmember").onclick =
 function addMembers() {
-  if (document.querySelector("#addMember input").value.length == 0) {
-    alert("Kindly Enter Task Name!!!!");
-  } else {
+
+  var name = document.getElementById("sel").value;
+
     document.querySelector("#member").innerHTML += `
           <div class="task-member d-flex col-8 justify-content-between">
               <span id="taskname">
-                  ${document.querySelector("#addMember input").value}
+                  ${document.querySelector("#addMember select ").value}
               </span>
 
               <div class="d-flex col-4 justify-content-between m-0">
@@ -215,7 +215,7 @@ function addMembers() {
       };
     }
   }
-}
+
 
 // Create task - add-members
 // Create task
@@ -305,5 +305,36 @@ function updateProfile() {
   };
 
   r.open("POST", "updateProfileProcess.php", true);
+  r.send(f);
+}
+function addtask(){
+  var name = document.getElementById("name").value;
+  var des = document.getElementById("dis").value;
+  var sdate =  document.getElementById("start-date").value;
+  var odate =  document.getElementById("end-date").value;
+  var member = document.getElementById("sel").value;
+
+ 
+
+  var f = new FormData();
+  f.append("name", name);
+  f.append("des", des);
+  f.append("sdate", sdate);
+  f.append("odate", odate);
+  f.append("mem", member);
+
+  var r = new XMLHttpRequest();
+  r.onreadystatechange = function () {
+    if (r.readyState == 4) {
+      var t = r.responseText;
+     
+        alert(t);
+      
+     
+    }
+  };
+
+  // Move the open and send methods here
+  r.open("POST", "../dashboard/createtaskprocess.php", true);
   r.send(f);
 }

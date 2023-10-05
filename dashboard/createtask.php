@@ -13,7 +13,7 @@
 
 <body id="create-task-body">
 
-<?php include "header.php" ?>
+<?php include '../header.php' ?>
 
     <div class="container-fluid">
         
@@ -26,29 +26,17 @@
                 <div class="d-flex flex-column mt-lg-3">
 
                     <p class="task-label-text">Task Name</p>
-                    <input type="text" class="mb-md-2">
+                    <input type="text" id="name" class="mb-md-2">
 
                     <p class="task-label-text">Description</p>
-                    <textarea name="" id="" cols="30" rows="4" class="mb-md-2"></textarea>
+                    <textarea name="" id="dis" cols="30" rows="4" class="mb-md-2"></textarea>
 
-                    <p class="task-label-text mt-2 mt-md-0 mb-1 mb-md-0">Technologies</p>
-                    <textarea name="" id="" cols="30" rows="4" class="mb-md-2"></textarea>
+                   
 
-                    <p class="task-label-text mt-2 mt-md-0 mb-1 mb-md-0">Targets</p>
-                    <div id="newtask" class="mb-md-2">
-                        <input type="text" placeholder="Add Tasks" aria-placeholder="Add Task">
-                        <button class="ms-3 btn-sm" id="push" onclick="addTarget();"><i class="bi bi-plus-lg"></i>
-                            Add</button>
-                    </div>
-                    <div id="tasks" class=""></div>
+                    
+                  
 
-                    <div class="d-flex mb-md-2 border-bottom border-dark align-content-center">
-                        <p class="task-label-text">Add File</p>
-                        <input id="task-file" type="file" class="" hidden>
-                        <button for="task-file" class="ms-5 btn btn-sm btn-primary mb-1 mb-md-1">
-                            <i class="bi bi-plus-lg"></i> Add
-                        </button>
-                    </div>
+                    
 
                     <p class="task-label-text mt-2 ">Date</p>
                     <div class="d-flex mb-md-1 justify-content-start mt-2 mt-md-0">
@@ -66,12 +54,29 @@
 
                     <p class="task-label-text border-bottom border-dark mb-2 mb-md-2">Add Members</p>
                     <div id="addMember" class="mb-md-2">
-                        <input type="text" placeholder="Search Member">
-                        <button class="ms-3 btn-sm btn-lg" onclick="addMembers();" id="pushmember"><i class="bi bi-search"></i></button>
+                        
+                        <select  type="text"   id="sel" class="form-select">
+                        <option value="0">SELECT Member</option>
+                            <?php
+                            require "../connection.php";
+                    $rs =         Database::search("SELECT * FROM `user_has_projects` WHERE `user_role_id`='2' AND `status_id`='1' AND `projects_id`='3'");
+                    $num = $rs->num_rows;
+                    for($x=0; $x<$num;$x++){
+                        $data = $rs->fetch_assoc();
+                        ?>
+                           <option value="<?php echo $data["user_email"]?>"><?php echo $data["user_email"]?></option>
+                        <?php
+                    }
+                            ?>
+                            
+                          
+                        </select>
+                       
                     </div>
                     <div id="member" class=""></div>
 
                 </div>
+                <button class="ms-3 btn-sm btn-lg text-center" onclick="addtask();"  id="pushmember"> add task</button>
 
             </div>
 
