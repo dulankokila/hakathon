@@ -92,61 +92,58 @@
                 </div>
 
                 <?php
-                $project_member = Database::search("SELECT * FROM `user_has_projects` INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `projects_id`='3'");
+$project_member = Database::search("SELECT * FROM `user_has_projects` INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `projects_id`='3'");
 
-                $project_member_row = $project_member->num_rows;
+$project_member_row = $project_member->num_rows;
 
-                $project_member_data = $project_member->fetch_assoc();
+?>
+
+<h4 class="border-bottom border-dark fw-bold mt-1 pb-2 pb-md-2">Assigned Members</h4>
+
+<div class="d-flex flex-row">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php
+           
+            for ($x = 0; $x < $project_member_row; $x++) {
+                $project_member_data = $project_member->fetch_assoc(); 
                 ?>
+                <tr>
+                    <th scope="row"><?php echo $x + 1 ?></th>
+                    <td>
+                        <?php echo $project_member_data["user_email"] ?>
+                    </td>
+                    <td>
+                        <?php echo $project_member_data["role"] ?>
+                    </td>
+                    <td class="">
+                        <a href="memberprofile.php?email=<?php echo $project_member_data["user_email"] ?>" class="project-view-btn bg-dark text-white"><i
+                                class="bi bi-wrench"></i></a>
+                        <a href="removememberprocess.php?email=<?php echo $project_member_data["user_email"] ?>&project_id=<?php echo $project_member_data["projects_id"] ?>" class="project-view-btn bg-danger text-white"><i
+                                class="bi bi-ban"></i></a>
+                        <a href="memberprofile.php?email=<?php echo $project_member_data["user_email"] ?>"
+                            class="project-view-btn bg-success text-white"><i
+                                class="bi bi-eye-fill"></i></a>
+                    </td>
+                </tr>
+                <?php
+            }
+            ?>
 
-                <h4 class="border-bottom border-dark fw-bold mt-1 pb-2 pb-md-2">Assigned Members</h4>
+        </tbody>
+    </table>
+</div>
 
-                <div class="d-flex flex-row">
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Role</th>
-                                
-                                <th scope="col">Manage</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <?php
-                            for ($x = 0; $x < $project_member_row; $x++) {
-                                ?>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>
-                                        <?php echo $project_member_data["user_email"] ?>
-                                       
-                                    </td>
-                                    <td>
-                                        <?php echo $project_member_data["role"] ?>
-                                    </td>
-                                    
-
-                                    <td class="">
-                                        <a href="memberprofile.php?email=<?php echo $project_member_data["user_email"] ?>" class="project-view-btn bg-dark text-white"><i
-                                                class="bi bi-wrench"></i></a>
-                                        <a href="removememberprocess.php?email=<?php echo $project_member_data["user_email"] ?>&project_id=<?php echo $project_member_data["projects_id"] ?>" class="project-view-btn bg-danger text-white"><i
-                                                class="bi bi-ban"></i></a>
-                                        <a href="memberprofile.php?email=<?php echo $project_member_data["user_email"] ?>"
-                                            class="project-view-btn bg-success text-white"><i
-                                                class="bi bi-eye-fill"></i></a>
-                                    </td>
-
-                                </tr>
-                                <?php
-                            }
-                            ?>
-
-
-                        </tbody>
-                    </table>
 
                 </div>
 
