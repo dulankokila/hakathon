@@ -602,3 +602,20 @@ input[type=date]:focus {
 
 
 }
+
+.footerbg{
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.footerbox{
+  height: 70px;
+}
+.footerfornt{
+  font-size: 22px;
+}
+.footerft{
+  color: #15aff3;
+}
