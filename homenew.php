@@ -88,7 +88,7 @@ $pro_num = $pro_rs->num_rows;
 // Loop through each project
 while ($user_data = $pro_rs->fetch_assoc()) {
     ?>
-    <a href="dashboard/projectdetails.php?id=<?php echo $user_data['id']; ?>"><?php echo ($user_data["name"]); ?></a> <br>
+    <a href="dashboard/projectdeatilsmember.php?id=<?php echo $user_data['id']; ?>"><?php echo ($user_data["name"]); ?></a> <br>
     <?php
 }
 ?>

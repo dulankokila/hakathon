@@ -133,10 +133,7 @@ $project_member_row = $project_member->num_rows;
                         <?php echo $project_member_data["role"] ?>
                     </td>
                     <td class="">
-                        <a href="memberprofile.php?email=<?php echo $project_member_data["user_email"] ?>" class="project-view-btn bg-dark text-white"><i
-                                class="bi bi-wrench"></i></a>
-                        <a href="removememberprocess.php?email=<?php echo $project_member_data["user_email"] ?>&project_id=<?php echo $project_member_data["projects_id"] ?>" class="project-view-btn bg-danger text-white"><i
-                                class="bi bi-ban"></i></a>
+                       
                         <a href="memberprofile.php?email=<?php echo $project_member_data["user_email"] ?>"
                             class="project-view-btn bg-success text-white"><i
                                 class="bi bi-eye-fill"></i></a>
