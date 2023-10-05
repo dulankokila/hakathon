@@ -51,7 +51,14 @@ function signin(){
     r.onreadystatechange = function (){
         if(r.readyState == 4){
             var t   = r.responseText;
-        alert(t);
+            if(t == "sucess"){
+                alert(t);
+        //   window.location =  "#";
+            }
+            else{
+                alert(t);
+            }
+      
        
         }
     }
