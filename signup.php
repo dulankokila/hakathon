@@ -69,12 +69,12 @@
           </button>
           <p class="mt-3 text-center">
             Have an account?
-            <a href="signin.html" class="signup-link">Sign In</a>
+            <a href="signin.php" class="signup-link">Sign In</a>
           </p>
           <div class="row justify-content-center mt-5">
-            <img src="images/2993685_brand_brands_google_logo_logos_icon (1).png" class="icon mx-3" /><img
-              src="images/4202105_microsoft_logo_social_social media_icon.png" class="icon mx-3" /><img
-              src="images/5296499_fb_facebook_facebook logo_icon.png" class="icon mx-3" />
+            <img src="images/2993685_brand_brands_google_logo_logos_icon (1).png" class="icon " /><img
+              src="images/4202105_microsoft_logo_social_social media_icon.png" class="icon " /><img
+              src="images/5296499_fb_facebook_facebook logo_icon.png" class="icon " />
           </div>
         </div>
       </div>
