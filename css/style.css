@@ -1,9 +1,11 @@
 :root {
 
-  --color-400: #24424d;
-  --color-300: #5b8291;
-  --color-200: #98dad9;
-  --color-100: #eaebed;
+  --color-500: #d0d0d0;
+  --color-400: #e1e1e1;
+  --color-300: #ececec;
+  --color-200: #f6f6f6;
+  --color-100: #ffffff;
+
 
 }
 
@@ -63,6 +65,28 @@ button:hover {
   cursor: pointer;
   transition-duration: 0.5s;
 }
+
+/* input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    background-color: #ffffff00;
+    border-bottom: 3px solid #b600e4;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    border-bottom: 3px solid #8500a7;
+}
+
+input[type=checkbox] {
+    width: auto;
+    height: auto;
+} */
+
+/* global css */
 
 .body3 {
   padding-top: 56px;
@@ -140,8 +164,6 @@ button:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
-
 }
 
 .icon {
@@ -190,4 +212,59 @@ button:hover {
 
 .signup-link:hover {
   color: #000000;
+}
+
+/* dashboard - create task */
+.create-task-body{
+  background: var(--color-300);
+}
+
+
+/* dashboard - create task */
+
+
+@media (max-width:769px) {}
+
+@media (max-width:576px) {
+
+    /* global css */
+    h1 {
+        font-size: 60px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 4px 8px;
+    }
+
+    /* global css */
+
 }
