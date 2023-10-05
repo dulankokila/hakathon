@@ -46,7 +46,7 @@ $data = $_SESSION["u"];
                         <label class="text-center border-bottom border-3 border-secondary">Project</label>
                         <div class="row m-3">
                             <div class="col-12">
-                                <button class="button">Create projects</button>
+                                <button class="button" onclick="go();">Create projects</button>
                             </div>
                             <div class=" row col-12 mt-5">
                        
