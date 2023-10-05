@@ -226,7 +226,7 @@ function go(){
 }
 
 function addeprojects(){
-alert("ok");
+// alert("ok");
  var name =  document.getElementById("name").value;
  var des =  document.getElementById("dis").value;
  var tech =  document.getElementById("tech").value;
