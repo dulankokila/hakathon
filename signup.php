@@ -17,7 +17,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 div">
-        <div id="signInForm " class="col-12 col-lg-12 ">
+        <div id="signInForm" >
           <h2 class="text-center">Sign Up</h2>
           <div class="text-center mb-2">
             <img src="images/profile-5681749-4730491.gif" class="gif" />
