@@ -1,3 +1,9 @@
+<?php
+session_start();
+$data = $_SESSION["u"];
+
+?>
+
 <html>
 
 <head>
@@ -16,7 +22,7 @@
             <nav class="navbar navbar-dark bg-dark fixed-top">
                 <div class="col-5 col-lg-1 mt-1 text-white fw-bold" style="margin-left: 20px;"><img src="images/black.jpg" class="logo" /> SALFORD</div>
                 <a class="navbar-brand"></a>
-                <div class="mx-5"><i class="bi bi-person-circle text-white mx-5"></i>
+                <div class="mx-5"> <a href="userProfile.php"><i class="bi bi-person-circle text-white mx-5" > </a></i>
                 <i class="bi bi-chat-left text-white"></i></div>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">

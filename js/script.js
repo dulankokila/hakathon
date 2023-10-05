@@ -219,3 +219,8 @@ function addMembers() {
 
 // Create task - add-members
 // Create task
+
+function go(){
+  alert("ok");
+  window.location = "createproject.php";
+}

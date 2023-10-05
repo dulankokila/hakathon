@@ -1,3 +1,4 @@
+Nisali, [10/5/2023 4:37 PM]
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
 
-    <link rel="icon" href="resource/logo.png" />
+    <link rel="icon" href="images/black.jpg" />
 </head>
 
 <body style="background-color: #040D12;">
@@ -24,8 +25,36 @@
 
             <?php include "header.php"; ?>
 
-            <br/>
-            <br/>
+            <br />
+            <br />
+
+            <?php
+
+            require "connection.php";
+
+            if (isset($_SESSION["u"])) {
+
+                $email = $_SESSION["u"]["email"];
+
+
+                $details_rs = Database::search("SELECT * FROM user  WHERE email='" . $email . "'");
+
+                $image_rs = Database::search("SELECT * FROM image WHERE user_email='" . $email . "'");
+                $country_rs = Database::search("SELECT * FROM user INNER JOIN country ON 
+                country.id=user.country_id WHERE email='" . $email . "'");
+
+
+
+                $data = $details_rs->fetch_assoc();
+                $image_data = $image_rs->fetch_assoc();
+                $country_data = $country_rs->fetch_assoc();
+
+
+            ?>
+
+
+
+
 
 
                 <div class="col-12" style="background-color:#183D3D;">
@@ -36,14 +65,14 @@
 
                                 <div class="col-md-3 border-end">
                                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
- 
+
 
 
                                         <span class="fw-bold"> </span>
                                         <span class="fw-bold text-black-50"></span>
 
-                                        <input type="file" class="d-none"/><img src="profile_img/profile.png" style="height: 200px;" />
-                                        <label for="profileimg" class="btn btn-primary mt-5" >Update Profile Image</label>
+                                        <input type="file" class="d-none" /><img src="profile_img/profile.png" style="height: 200px;" />
+                                        <label for="profileimg" class="btn btn-primary mt-5">Update Profile Image</label>
 
                                     </div>
                                 </div>
@@ -58,26 +87,21 @@
                                         <div class="row mt-4">
 
                                             <div class="col-6">
-                                                <label class="form-label">First Name</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;"/>
+                                                <label class="form-label">Full Name</label>
+                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>"  />
                                             </div>
 
-                                            <div class="col-6">
-                                                <label class="form-label">Last Name</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;"/>
-                                            </div>
+                                           
 
-                                            <div class="col-12">
-                                                <label class="form-label">Mobile</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;"/>
-                                            </div>
+                                           
 
                                             <div class="col-12">
-                                                <label class="form-label" >Password</label>
-                                                <div class="input-group"  >
-                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;"/>
-                                                    
-                                                    <span class="input-group-text bg-primary" style="border-bottom-right-radius: 20px;  border-top-right-radius: 20px">
+                                                <label class="form-label">Password</label>
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>"/>
+
+Nisali, [10/5/2023 4:37 PM]
+<span class="input-group-text bg-primary" style="border-bottom-right-radius: 20px;  border-top-right-radius: 20px">
                                                         <i class="bi bi-eye-slash-fill text-white"></i>
                                                     </span>
                                                 </div>
@@ -85,14 +109,14 @@
 
                                             <div class="col-12">
                                                 <label class="form-label">Email</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;" readonly/>
+                                                <input type="text" class="form-control disabled" style="border-radius: 20px;"value="<?php echo $data["email"]; ?> " />
                                             </div>
 
                                             <div class="col-12">
-                                                <label class="form-label">Registered Date</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;" readonly/>
+                                                <label class="form-label">Country</label>
+                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $country_data["name"]; ?> " />
                                             </div>
-   
+
 
                                             <div class="col-12 d-grid mt-3">
                                                 <button class="btn btn-primary">Update My Profile</button>
@@ -103,14 +127,22 @@
                                     </div>
                                 </div>
 
-                               
+
                             </div>
                         </div>
 
                     </div>
                 </div>
         </div>
+    <?php
+
+            } else {
+                header("Location:http://localhost/eshop_java/home.php");
+            }
+
+    ?>
     </div>
+
 
     <script src="bootstrap.bundle.js"></script>
     <script src="script.js"></script>
