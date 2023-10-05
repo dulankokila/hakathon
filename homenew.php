@@ -82,21 +82,18 @@ if (isset($_SESSION["u"])) {
                                         <div class="col-5">
                                             <h6 class="fw-bold">members projects</h6>
                                             <div class="col-12">
-                                                <?php
+                                            <?php
+$pro_rs = Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id  WHERE `user_role_id`='2'");
+$pro_num = $pro_rs->num_rows;
 
+// Loop through each project
+while ($user_data = $pro_rs->fetch_assoc()) {
+    ?>
+    <a href="dashboard/projectdetails.php?id=<?php echo $user_data['id']; ?>"><?php echo ($user_data["name"]); ?></a> <br>
+    <?php
+}
+?>
 
-                                                $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='member'");
-                                                $pro_num =  $pro_rs->num_rows;
-                                                $user_data = $pro_rs->fetch_assoc();
-
-                                                for ($x = 0; $x < $pro_num; $x++) {
-                                                ?>
-                                                    <a href=""><?php echo ($user_data["name"]); ?></a> <br>
-                                                <?php
-                                                }
-
-
-                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-5 justify-content-center">
@@ -106,14 +103,15 @@ if (isset($_SESSION["u"])) {
                                             <?php
 
 
-                                            $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='Admin'");
-                                            $pro_num =  $pro_rs->num_rows;
-                                            $user_data = $pro_rs->fetch_assoc();
+                                            $pro1_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id  WHERE `user_role_id`='1'");
+                                            $pro1_num =  $pro1_rs->num_rows;
+                                            $user1_data = $pro1_rs->fetch_assoc();
 
-                                            for ($x = 0; $x < $pro_num; $x++) {
-                                            ?>
-                                                <a href=""><?php echo ($user_data["name"]); ?></a> <br>
-                                            <?php
+                                            while ($user1_data = $pro1_rs->fetch_assoc()) {
+                                                ?>
+                                                <a href="dashboard/projectdetails.php?id=<?php echo $user1_data['id']; ?>"><?php echo ($user1_data["name"]); ?></a> <br>
+                                                <?php
+                                            }
                                             }
 
 
@@ -165,6 +163,7 @@ if (isset($_SESSION["u"])) {
                 </div>
             </div>
         </div>
+        <script src="js/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -174,7 +173,5 @@ if (isset($_SESSION["u"])) {
 
     </html>
 <?php
-} else {
-    echo ("Please login first");
-}
+ 
 ?>

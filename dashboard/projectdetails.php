@@ -15,14 +15,19 @@
 
     <?php
     include '../header.php';
-    require "../connection.php"
+    require "../connection.php";
+
+    $id = $_GET["id"];
+   
+   
+
         ?>
 
     <div class="container-fluid pt-1 pt-md-2 pt-lg-0 mt-5">
     <?php
            
          $rs =    Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON user_has_projects.projects_id=projects.id
-            WHERE `id`='3'");
+            WHERE `id`='".$id."'");
 
          $data =    $rs->fetch_assoc();
             ?>
@@ -36,7 +41,7 @@
             <?php
            
          $rsa =    Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON user_has_projects.projects_id=projects.id
-            WHERE `id`='3'");
+            WHERE `id`='".$id."'");
 
          $dataa =    $rsa->fetch_assoc();
             ?>
@@ -92,7 +97,7 @@
                 </div>
 
                 <?php
-$project_member = Database::search("SELECT * FROM `user_has_projects` INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `projects_id`='3'");
+$project_member = Database::search("SELECT * FROM `user_has_projects` INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `projects_id`='".$id."'");
 
 $project_member_row = $project_member->num_rows;
 

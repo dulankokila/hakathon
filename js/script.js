@@ -338,3 +338,9 @@ function addtask(){
   r.open("POST", "../dashboard/createtaskprocess.php", true);
   r.send(f);
 }
+
+function gotodeatils(id){
+ var id = id;
+
+
+}
