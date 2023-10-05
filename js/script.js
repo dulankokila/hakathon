@@ -53,7 +53,7 @@ function signin() {
       var t = r.responseText;
       if (t == "sucess") {
         alert(t);
-        //   window.location =  "#";
+          window.location =  "homenew.php";
       }
       else {
         alert(t);
