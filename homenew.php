@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="hstyle.css" />
-    <link rel="icon" href="images/black.png" />
+    <link rel="stylesheet" href="home01/hstyle.css" />
+    <link rel="icon" href="home01/image/black.png" />
 
 </head>
 
 <body class="body">
     <div class="container-fluid">
         <div class="row">
-            <?php include "C:\Users\KASUNA\Downloads\hackathons\hackathons\header.php"; ?>
+        <?php include '../header.php' ?>
 
             <div class="col-12">
                 <h1 class="mt-5 titel01">HOME</h1>
@@ -36,6 +36,7 @@
                             <div class="col-12">
                                 <button class="button">Create projects</button>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
