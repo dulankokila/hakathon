@@ -421,10 +421,54 @@ input[type=date]:focus {
  
     
 }
-img:hover{
+.b1{
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.t1{
+  
+}
+.news{
+  border-radius: 10px;
+  height: 425px;
+}
+.cp{
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 375px;
+}
+.b2{
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 250px;
+  height: 250px;
+}
+.img2{
+  width: 425px;
+  height: 250px;
+  transition: 0.7s ease;
+  border-radius: 10px;
+}
+.img2:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
+.btn{
+  padding: 6px 10px;
+  border: none;
+  font-weight: bold;
+  transition: 0.7s ease;
+}
+.btn:hover{
+  transform: scale(1.1);
+}
+.scroll{
+  margin-top: 10px;
+  max-width: 500px;
+  max-height: 350px;
+} 
+
 .d1{  
     color: rgb(74, 7, 82);
     font-size: 60px;
