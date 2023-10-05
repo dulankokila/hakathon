@@ -34,21 +34,3 @@ function signup(){
     r.send(f);
     
 }
-function uplodeprofilepicture(id){
-    
-var assimentid = id;
-var picture = document.getElementById("z").files[0];
-
-var f = new FormData();
-f.append("assimentid",assimentid);
-f.append("picture",picture);
-var r  = new XMLHttpRequest();
-r.onreadystatechange =function(){
-    if(r.readyState == 4){
-        var t = r.responseText;
-        alert(t);
-    }
-}
-r.open("POST","assimentuplode.php",true);
-r.send(f)
-}
