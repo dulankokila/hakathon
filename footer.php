@@ -57,9 +57,7 @@
 
                     <div class="  col-12 col-md-4 col-lg-4 mt-3">
                         <h5 class="text-uppercase mb-4 footerft">SALFORD </h5>
-                        <p>Here we are the salford.com&trade; to support you for &nbsp; accomplish your dessire by selling high
-                            quality products.</p>
-
+                        <p>Members of SALFORD&trade;. We can help you get global reach for your inspiring ideas.</p>
                     </div>
 
                     <div class="col-12 col-md-4 col-lg-4 mt-3 ">
