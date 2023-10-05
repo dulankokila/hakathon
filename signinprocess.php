@@ -1,4 +1,5 @@
 <?php
+ require "connection.php";
 $email  = $_POST["email"];
 $password = $_POST["password"];
 
@@ -9,8 +10,22 @@ else if(empty($password)){
     echo("Please enter your password");
 }
 else{
- $user_rs =    Database::search("SELECT * FROM `user` WHERE `email`='".$email."' AND `password`='".$password."'");
- $num = $user_rs->num_rows;
- 
+    $rs = Database::search("SELECT * FROM `user`  WHERE `email`='".$email."' AND `password`='".$password."'");
+    $num = $rs->num_rows;
+ if($num == 1){
+    $user_Data = $rs->fetch_assoc();
+    $_SESSION["u"]  =  $user_Data;
+
+    if($chcked == "true"){
+        setcookie("email", $email, time() + (60 * 60 * 24 * 365));
+        setcookie("password", $password, time() + (60 * 60 * 24 * 365));
+    }else{
+        setcookie("email", "", -1);
+        setcookie("password", "", -1);
+    }
+ }
+ else{
+    echo("invlide email or password");
+ }
 }
 ?>

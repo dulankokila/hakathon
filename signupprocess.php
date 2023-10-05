@@ -10,7 +10,7 @@ $country = $_POST["country"];
 
 
 if(empty($name)){
-    echo("Enter the fname");
+    echo("Enter the name");
 }
 
 else if(empty($email)){
