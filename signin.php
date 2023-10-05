@@ -27,7 +27,7 @@
 
           <button class="btn btn-primary btn-block" onclick="signin();">Sign In</button>
 
-          <p class="mt-3 text-center">Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
+          <p class="mt-3 text-center">Don't have an account? <a href="signup.php" class="signup-link">Sign Up</a></p>
 
           <div class="row justify-content-center  mt-5"><img
               src="images/2993685_brand_brands_google_logo_logos_icon (1).png" class="icon mx-3" /><img
