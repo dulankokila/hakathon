@@ -29,7 +29,7 @@ $data = $_SESSION["u"];
 
 
             <div class="col-12">
-                <h1 class="mt-5 t1 text-center">HOME</h1>
+                <h1 class="mt-5  text-center">HOME</h1>
 
                 <div class="row ms-4 d-flex justify-content-center">
 
