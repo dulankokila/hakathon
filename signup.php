@@ -23,28 +23,28 @@
           </div>
           <div class="form-group">
             <label for="username">Username:</label>
-            <input type="text" class="form-control" id="username" name="username" required />
+            <input type="text" class="form-control" id="username"  required />
           </div>
 
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" required />
+            <input type="email" class="form-control" id="email" required />
           </div>
 
           <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password" required />
+            <input type="password" class="form-control" id="password"  required />
           </div>
           
 
 
           <div class="form-group">
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+            <input type="password" class="form-control" id="confirmPassword" required />
           </div>
           <div class="form-group">
             <label for="password">Country:</label>
-            <select name="" id="country" class="form-select">
+            <select  id="country" class="form-select">
              
               <option value="0">Select Country</option>
               <?php
@@ -53,13 +53,18 @@
                                 $country_num = $country_rs->num_rows;
                                 echo($country_num);
 
-                               
+                                for($x = 0; $x<$country_num; $x++){
+                                    $country_data =  $country_rs->fetch_assoc();
+                                    ?>
+                                    <option value="<?php echo$country_data["id"]?>"><?php echo$country_data["name"]?></option>
+                                    <?php
+                                }
                                 ?>
              
              </select>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block">
+          <button type="submit" class="btn btn-primary btn-block" onclick="signup();">
             Sign Up
           </button>
           <p class="mt-3 text-center">
