@@ -496,3 +496,53 @@ img:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
+.d1{  
+    color: rgb(74, 7, 82);
+    font-size: 60px;
+    font-family: "Arial";
+    font-weight: bold;
+    transition:initial;
+}
+
+.background{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 700px;
+ 
+    
+}
+
+.d2{  
+    background-color: #050419;
+    
+}
+.logo{
+width: 40px;
+height: 40px;
+border-radius: 20px;
+
+}
+
+.d3{
+    height: 50px;
+    width: 200px;
+    background-color: rgb(160, 13, 126);
+    border-radius: 50px;
+    border: none;
+}
+
+.d3:hover{
+    background-color: rgb(74, 7, 82);
+    transition-duration: 1.5s;
+}
+
+.d4{
+    font-size: 20px;
+    font-weight: bold;
+    color: ghostwhite;
+}
+
+
+  
