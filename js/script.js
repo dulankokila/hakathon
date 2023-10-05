@@ -79,3 +79,32 @@ var bm;
     r.open("GET","fogotpasswordprocess.php?e=" +email,true);
     r.send();
  }
+
+ function resetpw(){
+    var password = document.getElementById("npi").value;
+  var repassword = document.getElementById("rnp").value;
+  var code = document.getElementById("vc").value;
+  var email = document.getElementById("email").value
+
+  var f = new FormData();
+  f.append("p",password);  
+  f.append("rp",repassword); 
+  f.append("c",code); 
+  f.append("e",email);
+
+    var r =new XMLHttpRequest();
+    r.onreadystatechange = function (){
+        if(r.readyState ==4){
+            var t = r.responseText;
+            if(t == "Password update Sucessful"){
+              alert(t);
+              window.location.reload();
+            }else{
+              alert(t);
+            }
+           
+        }
+      }
+    r.open("POST","newpasswordprocess.php",true);
+    r.send(f);
+ }
