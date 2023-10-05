@@ -250,6 +250,6 @@ function addeprojects() {
   };
 
   // Move the open and send methods here
-  r.open("POST", "addprojectprocess.php", true);
+  r.open("POST", "../dashboard/addprojectprocess.php", true);
   r.send(f);
 }
