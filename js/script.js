@@ -155,15 +155,15 @@ function addTarget() {
 }
 // Create task - targets
 
-// Create task - date-chooser
-const startDate = document.getElementById("start-date");
-startDate.value = "2023-10-05";
+// // Create task - date-chooser
+// const startDate = document.getElementById("start-date");
+// startDate.value = "2023-10-05";
 
-const endDate = document.getElementById("end-date");
-endDate.value = "dd-MM-yyyy";
-console.log(dateControl.value); // prints "2017-06-01"
-console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
-// Create task - date-chooser
+// const endDate = document.getElementById("end-date");
+// endDate.value = "dd-MM-yyyy";
+// console.log(dateControl.value); // prints "2017-06-01"
+// console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
+// // Create task - date-chooser
 
 // Create task - add-members
 // document.getElementById("#pushmember").onclick =
@@ -221,6 +221,38 @@ function addMembers() {
 // Create task
 
 function go(){
-  alert("ok");
-  window.location = "createproject.php";
+  
+  window.location = "dashboard/createproject.php";
+}
+
+function addeprojects(){
+alert("ok");
+ var name =  document.getElementById("name").value;
+ var des =  document.getElementById("dis").value;
+ var tech =  document.getElementById("tech").value;
+//  var sdate =  document.getElementById("start-date").value;
+//  var odate =  document.getElementById("end-date").value;
+// alert(sdate);
+// alert(odate);
+ var f = new FormData();
+ f.append("name", name);
+ f.append("des", des);
+ f.append("tech", tech);
+//  f.append("sdate", sdate);
+//  f.append("odate", odate);
+
+
+
+ var r = new XMLHttpRequest();
+ r.onreadystatechange = function () {
+   if (r.readyState == 4) {
+     var t = r.responseText;
+
+       alert(t);
+  
+ }
+ r.open("POST", "addprojectprocess.php", true);
+ r.send(f);
+ 
+}
 }
