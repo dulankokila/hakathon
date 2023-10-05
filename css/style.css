@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 :root {
 
@@ -87,6 +88,45 @@ input[type=checkbox] {
     width: auto;
     height: auto;
 } */
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  border-radius: .1875rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: .875rem;
+  margin-bottom: 1rem;
+  padding: .275rem;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  width: 200px;
+  padding: 5px 10px;
+  outline: none;
+  /* border: none;
+    padding: 4px; */
+  background-color: #ffffff00;
+  border: 3px solid #b600e4;
+}
+
+input[type=date]:focus {
+  border-bottom: 3px solid #8500a7;
+}
 
 /* global css */
 
@@ -227,16 +267,18 @@ input[type=checkbox] {
 }
 
 #create-task-body input[type=text],
+#create-task-body textarea,
 #create-task-body input[type=password] {
   width: 100%;
   padding: 5px 10px;
   outline: none;
   border: none;
-  background-color: #7b79e7;
+  background-color: #d8d7f1;
   border-bottom: 3px solid #b600e4;
 }
 
 #create-task-body input[type=text]:focus,
+#create-task-body textarea,
 #create-task-body input[type=password]:focus {
   border-bottom: 3px solid #8500a7;
 }
@@ -244,6 +286,107 @@ input[type=checkbox] {
 #create-task-body input[type=checkbox] {
   width: auto;
   height: auto;
+}
+
+#newtask,
+#addMember {
+  position: relative;
+  padding: 0px;
+  display: flex;
+}
+
+#newtask input,
+#addMember input {
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+}
+
+#newtask input:focus,
+#addMember input:focus {
+  outline: none;
+  border-color: #0d75ec;
+}
+
+#newtask button,
+#addMember button {
+  position: relative;
+  float: right;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #0d75ec;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  width: 25%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#tasks,
+#member {
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  padding: 0px;
+  margin-top: 4px;
+}
+
+.task,
+.task-member {
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #939697;
+  cursor: pointer;
+  background-color: #c5e1e6;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+}
+
+.task span,
+.task-member span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.task button {
+  background-color: #6583e5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.task-member button {
+  /* background-color: #6583e5; */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.addfilebtn {
+  width: auto;
+  height: auto;
+  background-color: #1f51f5;
+  color: #ffffff;
 }
 
 /* dashboard - create task */
@@ -293,4 +436,11 @@ input[type=checkbox] {
 
   /* global css */
 
+  input[type=date] {
+    width: 140px;
+  }
+
+  .task-label-text {
+    font-size: 16px;
+  }
 }
