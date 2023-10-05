@@ -23,7 +23,7 @@
 
                 <h4 class="border-bottom border-dark fw-bold pb-2 pb-md-2">Project Name</h4>
 
-                <div class="d-flex flex-row">
+                <div class="d-flex flex-column flex-md-row">
 
                     <div class="col-12 col-md-7">
 
@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="d-flex flex-column mt-2 mb-2">
-                                <p class="fw-bold m-0">Tasks :</p>
+                                <p class="fw-bold m-0">Targets :</p>
                                 <ul class="list-group list-group-flush bg-transparent text-start">
                                     <li class="list-group-item bg-transparent m-0 py-1"><i class="bi bi-dot"></i> An item</li>
                                     <li class="list-group-item bg-transparent m-0 py-1"><i class="bi bi-dot"></i> A second item</li>
@@ -51,12 +51,12 @@
 
                     </div>
                     <div class="col-12 col-md-5">
-                        <div class="d-flex flex-column align-items-end">
+                        <div class="d-flex flex-column align-items-start align-items-md-end">
                             <p class="fw-bold mb-2 text-danger">Project DeadLine : 2023-11-23</p>
                             <p class="mb-2r">Project Start Date : 2023-11-23</p>
-                            <div class="d-flex flex-column align-items-end">
+                            <div class="d-flex flex-column align-items-start align-items-md-end">
                                 <p class="fw-bold mb-2">Technologies</p>
-                                <ul class="list-group list-group-flush bg-transparent text-end">
+                                <ul class="list-group list-group-flush bg-transparent text-start text-md-end">
                                     <li class="list-group-item bg-transparent m-0 px-1"><i class="bi bi-dot"></i> An item</li>
                                     <li class="list-group-item bg-transparent m-0 px-1"><i class="bi bi-dot"></i> A second item</li>
                                     <li class="list-group-item bg-transparent m-0 px-1"><i class="bi bi-dot"></i> A third item</li>
