@@ -2,7 +2,7 @@
 
  require "../connection.php";
  session_start();
- $data = $_SESSION["u"];
+ $dataa = $_SESSION["u"];
 
 $name = $_POST["name"];
 $des = $_POST["des"];
@@ -26,12 +26,18 @@ else if(empty($des)){
     echo("Please enter end date");
 }
 else{
-    Database::search("INSERT INTO `project`(`name`,`description`,`technology`,`start_date`,`close_date`,`prgroess_id`)
+    Database::search("INSERT INTO `projects`(`name`,`description`,`technology`,`start_date`,`close_date`,`prgroess_id`)
     VALUES('".$name."','".$des."','".$tech."','".$sdate."','".$odate."','1')");
+ 
+ 
+$rs =  Database::search("SELECT * FROM projects ORDER BY id DESC LIMIT 1;");
+$data = $rs->fetch_assoc();
 
-echo("sucess");
 
-//     Database::search("INSERT INTO `user_has_projects`(`user_email`,`projects_id`,`user_role_id`,`status_id`)
-// VALUES('".$data["email"]."','".$des."','".$tech."','".$sdate."','".$odate."','1')");
+
+    Database::search("INSERT INTO `user_has_projects`(`user_email`,`projects_id`,`user_role_id`,`status_id`)
+    VALUES('".$dataa["email"]."','".$data["id"]."','1','1')");
+
+    echo("Sucess");
 }
  ?>

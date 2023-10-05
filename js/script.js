@@ -245,7 +245,13 @@ function addeprojects() {
   r.onreadystatechange = function () {
     if (r.readyState == 4) {
       var t = r.responseText;
-      alert(t);
+      if(t = "Sucess"){
+        window.location.reload();
+      }
+      else{
+        alert(t);
+      }
+     
     }
   };
 
