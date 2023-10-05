@@ -15,9 +15,9 @@
 
     <?php include '../header.php' ?>
 
-    <div class="container-fluid pt-5 pt-md-3 pt-lg-0">
+    <div class="container-fluid pt-1 pt-md-2 pt-lg-0">
 
-        <div class="d-flex justify-content-start pt-5 pt-md-5 pt-lg-5">
+        <div class="d-flex justify-content-start pt-1 pt-md-1 pt-lg-2">
 
             <div class="col-12 py-3 px-1 px-md-4">
 
