@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 :root {
 
   --color-500: #d0d0d0;
@@ -13,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html {
@@ -215,10 +217,34 @@ input[type=checkbox] {
 }
 
 /* dashboard - create task */
-.create-task-body{
-  background: var(--color-300);
+#create-task-body {
+  background: var(--color-200);
 }
 
+.task-label-text {
+  font-size: 22px;
+  margin: 0;
+}
+
+#create-task-body input[type=text],
+#create-task-body input[type=password] {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  background-color: #7b79e7;
+  border-bottom: 3px solid #b600e4;
+}
+
+#create-task-body input[type=text]:focus,
+#create-task-body input[type=password]:focus {
+  border-bottom: 3px solid #8500a7;
+}
+
+#create-task-body input[type=checkbox] {
+  width: auto;
+  height: auto;
+}
 
 /* dashboard - create task */
 
@@ -227,44 +253,44 @@ input[type=checkbox] {
 
 @media (max-width:576px) {
 
-    /* global css */
-    h1 {
-        font-size: 60px;
-    }
+  /* global css */
+  h1 {
+    font-size: 60px;
+  }
 
-    h1 {
-        font-size: 48px;
-    }
+  h1 {
+    font-size: 48px;
+  }
 
-    h2 {
-        font-size: 36px;
-    }
+  h2 {
+    font-size: 36px;
+  }
 
-    h3 {
-        font-size: 30px;
-    }
+  h3 {
+    font-size: 30px;
+  }
 
-    h4 {
-        font-size: 24px;
-    }
+  h4 {
+    font-size: 24px;
+  }
 
-    h5 {
-        font-size: 20px;
-    }
+  h5 {
+    font-size: 20px;
+  }
 
-    h6 {
-        font-weight: 700;
-        font-size: 18px;
-    }
+  h6 {
+    font-weight: 700;
+    font-size: 18px;
+  }
 
-    p {
-        font-size: 14px;
-    }
+  p {
+    font-size: 14px;
+  }
 
-    button {
-        padding: 4px 8px;
-    }
+  button {
+    padding: 4px 8px;
+  }
 
-    /* global css */
+  /* global css */
 
 }
