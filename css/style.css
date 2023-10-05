@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
@@ -400,97 +401,25 @@ input[type=date]:focus {
 
 @media (max-width:769px) {}
 
-@media (max-width:576px) {
+@media (max-width:576px) {}
 
   /* global css */
   h1 {
+
     font-size: 60px;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-
-  h2 {
-    font-size: 36px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  h4 {
-    font-size: 24px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
-
-  h6 {
-    font-weight: 700;
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  button {
-    padding: 4px 8px;
-  }
-
-  /* global css */
-
-  input[type=date] {
-    width: 140px;
-  }
-
-  .task-label-text {
-    font-size: 16px;
-  }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
-
-.body{
-    
-    background-color: #f2f2f2;
-}
-
-.titel01{
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-}
-.b1{
-    top: 30px;
-    padding: 10px;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    height: 500px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.news{
-    height: 400px;
-}
-.button {
-    justify-items: end;
-    background-color: aquamarine;
-    padding: 6px 10px;
-    border: none;
+    font-family: "Arial";
     font-weight: bold;
-    border-radius: 10px;
-    transition: 0.7s ease;
+    transition:initial;
 }
-button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+
+.background{
     
-  }
-img{
-    transition: 0.7s ease;
-    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 700px;
+ 
+    
 }
 img:hover{
     cursor: pointer;
@@ -546,3 +475,4 @@ border-radius: 20px;
 
 
   
+
