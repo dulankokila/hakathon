@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+.body{
+    
+    background-color: #f2f2f2;
+}
+
+.titel01{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+.b1{
+    top: 30px;
+    padding: 10px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.news{
+    height: 400px;
+}
+.button {
+    justify-items: end;
+    background-color: aquamarine;
+    padding: 6px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.7s ease;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    
+  }
+img{
+    transition: 0.7s ease;
+    height: 250px;
+}
+img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
