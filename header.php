@@ -1,3 +1,9 @@
+<?php
+session_start();
+$data = $_SESSION["u"];
+
+?>
+
 <html>
 
 <head>

@@ -1,7 +1,10 @@
 <?php
  require "connection.php";
-session_start();
+ session_start();
 if(isset($_SESSION["u"])){
+   
+$data = $_SESSION["u"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,9 +74,13 @@ if(isset($_SESSION["u"])){
                    $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='member'");
                    $pro_num =  $pro_rs->num_rows;
                    $user_data = $pro_rs->fetch_assoc();
-                         ?>
-                         <a href=""><?php echo $u["email"]?></a>
-                         <?php
+
+                   for($x=0; $x<$pro_num; $x++){
+                    ?>
+                     <a href=""><?php  echo($user_data["name"]);?></a> <br>
+                    <?php
+                   }
+                        
                    
                         ?>
                        </div>
@@ -82,7 +89,21 @@ if(isset($_SESSION["u"])){
                        <h6 class="fw-bold">Admin projects</h6>
                        </div>
                        <div class="col-12">
-                           <!-- search projects -->
+                       <?php
+                       
+                        
+                       $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='Admin'");
+                       $pro_num =  $pro_rs->num_rows;
+                       $user_data = $pro_rs->fetch_assoc();
+    
+                       for($x=0; $x<$pro_num; $x++){
+                        ?>
+                         <a href=""><?php  echo($user_data["name"]);?></a> <br>
+                        <?php
+                       }
+                            
+                       
+                            ?>
                        </div>
 
                        </div>
