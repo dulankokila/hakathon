@@ -27,7 +27,6 @@ if (isset($_SESSION["u"])) {
         <div class="container-fluid">
             <div class="row">
 
-
                 <div class="col-12">
                     <h1 class="mt-5 titel01">HOME</h1>
 
