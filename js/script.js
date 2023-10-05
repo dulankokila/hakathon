@@ -344,3 +344,8 @@ function gotodeatils(id){
 
 
 }
+
+function gosignin(){
+  alert("ok");
+  window.location = "signin.php";
+}

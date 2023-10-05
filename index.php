@@ -25,7 +25,7 @@
                             <h3 class="offset-1 d1">We are the NO 1 Projects Management System </h3>
 
                             <div>
-                                <button class="offset-1 mt-5 d3 d4">Get Start</button>
+                                <button class="offset-1 mt-5 d3 d4" onclick="gosignin();">Get Start</button>
                             </div>
                         </div>
                     </div>
@@ -67,6 +67,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
     <!-- <script src="script.js"></script> -->
 </body>
 </html>
