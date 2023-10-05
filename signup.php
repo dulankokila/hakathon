@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 div">
-        <form id="signInForm">
+        <div id=" " class="col-12 col-lg-12 ">
           <h2 class="text-center">Sign Up</h2>
           <div class="text-center mb-2">
             <img src="images/profile-5681749-4730491.gif" class="gif" />
@@ -34,10 +35,28 @@
             <label for="password">Password:</label>
             <input type="password" class="form-control" id="password" name="password" required />
           </div>
+          
+
 
           <div class="form-group">
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Country:</label>
+            <select name="" id="country" class="form-select">
+             
+              <option value="0">Select Country</option>
+              <?php
+              require "connection.php";
+                                $country_rs = Database::search("SELECT * FROM `country`");
+                                $country_num = $country_rs->num_rows;
+                                echo($country_num);
+
+                               
+                                ?>
+             
+             </select>
           </div>
 
           <button type="submit" class="btn btn-primary btn-block">
@@ -52,7 +71,7 @@
               src="images/4202105_microsoft_logo_social_social media_icon.png" class="icon mx-3" /><img
               src="images/5296499_fb_facebook_facebook logo_icon.png" class="icon mx-3" />
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
